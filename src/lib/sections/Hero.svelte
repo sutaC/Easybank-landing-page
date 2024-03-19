@@ -6,14 +6,17 @@
 	<div class="banner">
 		<img src="/images/image-mockups.png" alt="Mockups" />
 	</div>
-	<h1 id="hHero">Next generation digital banking</h1>
-	<small>
-		Take your financial life online. Your Easybank account will be a one-stop-shop for spending,
-		saving, budgeting, investing, and much more.
-	</small>
 
-	<div class="buttonContainer">
-		<CustomButton>Request Invite</CustomButton>
+	<div class="content">
+		<h1 id="hHero">Next generation digital banking</h1>
+		<small>
+			Take your financial life online. Your Easybank account will be a one-stop-shop for spending,
+			saving, budgeting, investing, and much more.
+		</small>
+
+		<div class="buttonContainer">
+			<CustomButton>Request Invite</CustomButton>
+		</div>
 	</div>
 </section>
 
@@ -30,7 +33,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-		z-index: -1;
+		z-index: 1;
 	}
 
 	.banner > img {
@@ -60,5 +63,41 @@
 	.buttonContainer {
 		text-align: center;
 		margin: 1.5rem auto;
+	}
+
+	@media (width >= 700px) {
+		.hero {
+			display: flex;
+			flex-direction: row-reverse;
+			margin-bottom: 0;
+			max-height: 25rem;
+		}
+
+		.banner {
+			background-image: url('/images/bg-intro-desktop.svg');
+			background-size: 150%;
+			background-position: left;
+		}
+
+		.banner > img {
+			height: 140%;
+			width: auto;
+			top: -15%;
+			right: -10%;
+		}
+
+		.content {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			gap: 1rem;
+			padding-inline: 10%;
+		}
+
+		.content > * {
+			text-align: left;
+			margin: 0;
+			width: 100%;
+		}
 	}
 </style>

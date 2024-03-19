@@ -46,6 +46,7 @@
 	.information {
 		padding: 2rem 0;
 		background-color: var(--clr-section-bg);
+		z-index: -1;
 	}
 
 	.point {
@@ -74,5 +75,12 @@
 
 	small {
 		color: var(--clr-text-light);
+	}
+
+	@media (width >= 700px) {
+		.information {
+			position: relative;
+			z-index: -1;
+		}
 	}
 </style>

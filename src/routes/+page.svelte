@@ -65,6 +65,7 @@
 		margin: 0;
 		min-height: 100vh;
 		background-color: var(--clr-body-bg);
+		overflow-x: hidden;
 	}
 
 	/* --- */

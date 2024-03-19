@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Articles from '$lib/sections/Articles.svelte';
 	import Header from '$lib/sections/Header.svelte';
 	import Hero from '$lib/sections/Hero.svelte';
 	import Information from '$lib/sections/Information.svelte';
@@ -8,6 +9,7 @@
 	<Header></Header>
 	<Hero></Hero>
 	<Information></Information>
+	<Articles></Articles>
 </main>
 
 <style>

@@ -15,7 +15,7 @@
 	</div>
 
 	<div class="point">
-		<img src="/images/icon-budgeting.svg" alt="Online" />
+		<img src="/images/icon-budgeting.svg" alt="Budgeting" />
 		<h3>Simple Budgeting</h3>
 		<small
 			>See exactly where your money goes each month. Receive notifications when you’re close to
@@ -24,7 +24,7 @@
 	</div>
 
 	<div class="point">
-		<img src="/images/icon-onboarding.svg" alt="Online" />
+		<img src="/images/icon-onboarding.svg" alt="Onboarding" />
 		<h3>Fast Onboarding</h3>
 		<small
 			>We don’t do branches. Open your account in minutes online and start taking control of your
@@ -33,7 +33,7 @@
 	</div>
 
 	<div class="point">
-		<img src="/images/icon-api.svg" alt="Online" />
+		<img src="/images/icon-api.svg" alt="Api" />
 		<h3>Open API</h3>
 		<small>
 			Manage your savings, investments, pension, and much more from one account. Tracking your money

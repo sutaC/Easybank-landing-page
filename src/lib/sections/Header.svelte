@@ -105,13 +105,6 @@
 		margin: 1rem;
 	}
 
-	@media (width >= 700px) {
-		nav.desktop {
-			display: flex;
-			gap: 1rem;
-		}
-	}
-
 	/* Animations */
 
 	@keyframes fadeIn {
@@ -128,9 +121,14 @@
 		animation: fadeIn 150ms ease-out;
 	}
 
-	@media (width > 700px) {
+	@media (width >= 800px) {
 		header {
 			justify-content: space-evenly;
+		}
+
+		nav.desktop {
+			display: flex;
+			gap: 1rem;
 		}
 	}
 </style>

@@ -76,7 +76,7 @@
 	:global(.desktop) {
 		display: none;
 	}
-	@media (width >= 700px) {
+	@media (width >= 800px) {
 		:global(.mobile) {
 			display: none;
 		}
@@ -86,6 +86,10 @@
 	}
 
 	/* --- */
+
+	main {
+		overflow: hidden;
+	}
 
 	.attribution {
 		padding: 0.125rem;

@@ -65,7 +65,7 @@
 		margin: 1.5rem auto;
 	}
 
-	@media (width >= 700px) {
+	@media (width >= 800px) {
 		.hero {
 			display: flex;
 			flex-direction: row-reverse;

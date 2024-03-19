@@ -10,6 +10,14 @@
 	<Hero></Hero>
 	<Information></Information>
 	<Articles></Articles>
+
+	<div class="attribution">
+		Challenge by
+		<a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer"
+			>Frontend Mentor</a
+		>. Coded by
+		<a href="https://github.com/sutaC" target="_blank" rel="noopener noreferrer">sutaC</a>.
+	</div>
 </main>
 
 <style>
@@ -55,5 +63,27 @@
 		margin: 0;
 		min-height: 100vh;
 		background-color: var(--clr-body-bg);
+	}
+
+	/* --- */
+
+	.attribution {
+		padding: 0.125rem;
+		width: 100%;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		font-size: 0.65rem;
+		text-align: center;
+		color: var(--clr-text-light);
+	}
+
+	.attribution a {
+		color: var(--clr-secondary);
+		transition: opacity 100ms ease-in-out;
+	}
+
+	.attribution :where(a:hover, a:focus) {
+		opacity: 0.75;
 	}
 </style>

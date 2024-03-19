@@ -1,11 +1,13 @@
 <script lang="ts">
 	import Header from '$lib/sections/Header.svelte';
 	import Hero from '$lib/sections/Hero.svelte';
+	import Information from '$lib/sections/Information.svelte';
 </script>
 
 <main>
 	<Header></Header>
 	<Hero></Hero>
+	<Information></Information>
 </main>
 
 <style>

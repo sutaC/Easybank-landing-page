@@ -42,7 +42,7 @@
 	h1,
 	small {
 		display: block;
-		padding-inline: 2rem;
+		max-width: 35ch;
 		text-align: center;
 		font-weight: var(--fw-light);
 	}

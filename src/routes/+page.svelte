@@ -69,6 +69,23 @@
 
 	/* --- */
 
+	:global(.mobile) {
+		display: block;
+	}
+	:global(.desktop) {
+		display: none;
+	}
+	@media (width >= 700px) {
+		:global(.mobile) {
+			display: none;
+		}
+		:global(.desktop) {
+			display: block;
+		}
+	}
+
+	/* --- */
+
 	.attribution {
 		padding: 0.125rem;
 		width: 100%;

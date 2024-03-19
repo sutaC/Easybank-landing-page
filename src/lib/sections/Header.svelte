@@ -1,4 +1,6 @@
 <script lang="ts">
+	import CustomButton from '$lib/components/CustomButton.svelte';
+
 	let dialog: HTMLDialogElement | null = null;
 
 	function handleOpenNav() {
@@ -14,12 +16,25 @@
 	<a href="/" class="logo">
 		<img src="/images/logo.svg" alt="logo" />
 	</a>
-	<button class="hamburger" aria-label="Open navigation" on:click={handleOpenNav}>
+
+	<nav class="desktop">
+		<a href="# ">Home</a>
+		<a href="# ">About</a>
+		<a href="# ">Contact</a>
+		<a href="# ">Blog</a>
+		<a href="# ">Careers</a>
+	</nav>
+
+	<button class="hamburger mobile" aria-label="Open navigation" on:click={handleOpenNav}>
 		<img src="/images/icon-hamburger.svg" alt="Hamburger" />
 	</button>
+
+	<div class="desktop">
+		<CustomButton>Request Invite</CustomButton>
+	</div>
 </header>
 
-<nav>
+<nav class="mobile">
 	<dialog bind:this={dialog}>
 		<a href="# " on:click={handleCloseNav}>Home</a>
 		<a href="# " on:click={handleCloseNav}>About</a>
@@ -73,18 +88,28 @@
 		background: linear-gradient(var(--clr-text), transparent);
 	}
 
-	dialog > a {
+	nav a {
 		display: block;
 		text-decoration: none;
 		color: var(--clr-text);
 		text-align: center;
-		margin: 1rem;
 		font-weight: var(--fw-light);
 		transition: all 150ms ease-out;
 	}
 
-	dialog > a:hover {
+	nav a:hover {
 		opacity: 0.7;
+	}
+
+	dialog > a {
+		margin: 1rem;
+	}
+
+	@media (width >= 700px) {
+		nav.desktop {
+			display: flex;
+			gap: 1rem;
+		}
 	}
 
 	/* Animations */
@@ -101,5 +126,11 @@
 	dialog[open],
 	.backdrop {
 		animation: fadeIn 150ms ease-out;
+	}
+
+	@media (width > 700px) {
+		header {
+			justify-content: space-evenly;
+		}
 	}
 </style>

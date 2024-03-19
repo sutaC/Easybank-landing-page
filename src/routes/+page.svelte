@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Articles from '$lib/sections/Articles.svelte';
+	import Footer from '$lib/sections/Footer.svelte';
 	import Header from '$lib/sections/Header.svelte';
 	import Hero from '$lib/sections/Hero.svelte';
 	import Information from '$lib/sections/Information.svelte';
@@ -10,6 +11,7 @@
 	<Hero></Hero>
 	<Information></Information>
 	<Articles></Articles>
+	<Footer></Footer>
 
 	<div class="attribution">
 		Challenge by

@@ -55,6 +55,7 @@
 	}
 
 	:global(html) {
+		scroll-behavior: smooth;
 		font-family: 'Public Sans', sans-serif;
 		font-size: 18px;
 		font-weight: var(--fw-normal);
@@ -86,10 +87,6 @@
 	}
 
 	/* --- */
-
-	main {
-		overflow: hidden;
-	}
 
 	.attribution {
 		padding: 0.125rem;

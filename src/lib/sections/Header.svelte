@@ -2,13 +2,10 @@
 	import CustomButton from '$lib/components/CustomButton.svelte';
 
 	let dialog: HTMLDialogElement | null = null;
+	let navOpen = false;
 
-	function handleOpenNav() {
-		dialog?.showModal();
-	}
-
-	function handleCloseNav() {
-		dialog?.close();
+	function toggleNav() {
+		navOpen = !navOpen;
 	}
 </script>
 
@@ -25,8 +22,12 @@
 		<a href="# ">Careers</a>
 	</nav>
 
-	<button class="hamburger mobile" aria-label="Open navigation" on:click={handleOpenNav}>
-		<img src="/images/icon-hamburger.svg" alt="Hamburger" />
+	<button class="hamburger mobile" aria-label="Open navigation" on:click={() => toggleNav()}>
+		{#if navOpen === true}
+			<img src="/images/icon-close.svg" alt="Hamburger" />
+		{:else}
+			<img src="/images/icon-hamburger.svg" alt="Hamburger" />
+		{/if}
 	</button>
 
 	<div class="desktop">
@@ -34,21 +35,20 @@
 	</div>
 </header>
 
-<nav class="mobile">
-	<dialog bind:this={dialog}>
-		<a href="# " on:click={handleCloseNav}>Home</a>
-		<a href="# " on:click={handleCloseNav}>About</a>
-		<a href="# " on:click={handleCloseNav}>Contact</a>
-		<a href="# " on:click={handleCloseNav}>Blog</a>
-		<a href="# " on:click={handleCloseNav}>Careers</a>
-	</dialog>
-	<div class="backdrop"></div>
+<nav class="mobile dialog" class:open={navOpen}>
+	<a href="# " on:click={toggleNav}>Home</a>
+	<a href="# " on:click={toggleNav}>About</a>
+	<a href="# " on:click={toggleNav}>Contact</a>
+	<a href="# " on:click={toggleNav}>Blog</a>
+	<a href="# " on:click={toggleNav}>Careers</a>
 </nav>
+
+<div class="backdrop"></div>
 
 <style>
 	header {
 		position: sticky;
-		top: 0;
+		top: 0px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -63,22 +63,28 @@
 		border: none;
 	}
 
-	dialog {
-		border: none;
-		border-radius: 0.5rem;
-		width: 100%;
-		top: -35%;
+	.dialog {
+		display: none;
 	}
 
-	dialog::backdrop {
-		background: transparent;
+	.dialog.open {
+		display: block;
+		position: fixed;
+		left: 50%;
+		top: 30%;
+		translate: -50% -50%;
+		width: 90%;
+		padding: 1rem;
+		z-index: 95;
+		border-radius: 0.5rem;
+		background-color: var(--clr-base);
 	}
 
 	.backdrop {
 		display: none;
 	}
 
-	dialog[open] + .backdrop {
+	.dialog.open + .backdrop {
 		display: block;
 		position: fixed;
 		left: 0;
@@ -86,6 +92,11 @@
 		width: 100vw;
 		height: 100vh;
 		background: linear-gradient(var(--clr-text), transparent);
+		z-index: 90;
+	}
+
+	:global(body):has(.dialog.open) {
+		overflow: hidden;
 	}
 
 	nav a {
@@ -93,7 +104,7 @@
 		text-decoration: none;
 		color: var(--clr-text);
 		text-align: center;
-		font-weight: var(--fw-light);
+		font-weight: var(--fw-normal);
 		transition: all 150ms ease-out;
 	}
 
@@ -101,7 +112,7 @@
 		opacity: 0.7;
 	}
 
-	dialog > a {
+	.dialog > a {
 		margin: 1rem;
 	}
 
@@ -116,7 +127,7 @@
 		}
 	}
 
-	dialog[open],
+	.dialog.open,
 	.backdrop {
 		animation: fadeIn 150ms ease-out;
 	}
@@ -128,7 +139,7 @@
 
 		nav.desktop {
 			display: flex;
-			gap: 1rem;
+			gap: 2rem;
 		}
 	}
 </style>

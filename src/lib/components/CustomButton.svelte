@@ -12,5 +12,16 @@
 		font-weight: var(--fw-nromal);
 		color: var(--clr-base);
 		text-align: center;
+		cursor: pointer;
+		transition: all 100ms ease-out;
+	}
+
+	button:where(:hover, :active) {
+		background-color: rgba(255, 255, 255, 0.25);
+		background-blend-mode: hard-light;
+	}
+
+	button:active {
+		scale: 0.975;
 	}
 </style>

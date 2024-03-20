@@ -128,7 +128,8 @@
 	}
 
 	.dialog.open,
-	.backdrop {
+	.backdrop,
+	.hamburger > img {
 		animation: fadeIn 150ms ease-out;
 	}
 
@@ -139,7 +140,39 @@
 
 		nav.desktop {
 			display: flex;
+			align-items: center;
 			gap: 2rem;
+		}
+
+		nav.desktop a {
+			position: relative;
+			flex: 1;
+			color: var(--clr-text-light);
+		}
+
+		nav.desktop a:where(:hover, :active) {
+			color: var(--clr-text);
+			opacity: 1;
+		}
+
+		nav.desktop a::after {
+			display: block;
+			content: '';
+			position: absolute;
+			height: 3px;
+			width: 100%;
+			border-radius: 1px;
+			top: 225%;
+
+			opacity: 0;
+			translate: 0 -100%;
+			transition: all 150ms ease-out;
+		}
+
+		nav.desktop a:where(:hover, :active)::after {
+			background: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
+			translate: 0;
+			opacity: 1;
 		}
 	}
 </style>

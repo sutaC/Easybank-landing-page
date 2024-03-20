@@ -8,8 +8,10 @@
 
 <main>
 	<Header></Header>
-	<Hero></Hero>
-	<Information></Information>
+	<div class="overflowContainer">
+		<Hero></Hero>
+		<Information></Information>
+	</div>
 	<Articles></Articles>
 	<Footer></Footer>
 
@@ -84,6 +86,12 @@
 		:global(.desktop) {
 			display: block;
 		}
+	}
+
+	/* --- */
+
+	.overflowContainer {
+		overflow: hidden;
 	}
 
 	/* --- */

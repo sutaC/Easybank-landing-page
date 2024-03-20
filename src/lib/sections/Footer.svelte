@@ -10,20 +10,45 @@
 			</a>
 
 			<div class="socials">
-				<a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
-					<img src="/images/icon-facebook.svg" alt="Facebook" />
+				<a
+					href="http://facebook.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					style="--_icon: url('/images/icon-facebook.svg')"
+					aria-label="Facebook"
+				>
 				</a>
-				<a href="http://youtube.com" target="_blank" rel="noopener noreferrer">
-					<img src="/images/icon-youtube.svg" alt="YouTube" />
+				<a
+					href="http://youtube.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					style="--_icon: url('/images/icon-youtube.svg')"
+					aria-label="YouTube"
+				>
 				</a>
-				<a href="http:///twitter.com" target="_blank" rel="noopener noreferrer">
-					<img src="/images/icon-twitter.svg" alt="Twitter" />
+				<a
+					href="http://twitter.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					style="--_icon: url('/images/icon-twitter.svg')"
+					aria-label="Twitter"
+				>
 				</a>
-				<a href="http://pinterest.com" target="_blank" rel="noopener noreferrer">
-					<img src="/images/icon-pinterest.svg" alt="Pinterest" />
+				<a
+					href="http://pinterest.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					style="--_icon: url('/images/icon-pinterest.svg')"
+					aria-label="Pinterest"
+				>
 				</a>
-				<a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
-					<img src="/images/icon-instagram.svg" alt="Instagram" />
+				<a
+					href="http://instagram.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					style="--_icon: url('/images/icon-instagram.svg')"
+					aria-label="Instagram"
+				>
 				</a>
 			</div>
 		</div>
@@ -84,8 +109,30 @@
 		gap: 1rem;
 	}
 
-	.links > a {
+	.socials a {
+		width: 1rem;
+		aspect-ratio: 1;
+		background-color: var(--clr-base);
+		display: block;
+		mask-image: var(--_icon);
+		mask-size: cover;
+		mask-position: center;
+		mask-repeat: no-repeat;
+		z-index: 0;
+		transition: all 150ms ease-out;
+	}
+
+	.socials a:where(:hover, :active) {
+		background-color: var(--clr-primary);
+	}
+
+	.links a {
 		margin: 1rem 0;
+		transition: all 150ms ease-out;
+	}
+
+	.links a:where(:hover, :active) {
+		color: var(--clr-primary);
 	}
 
 	.btnContainer {
@@ -137,6 +184,7 @@
 
 		.links a {
 			margin: 0;
+			text-align: left;
 		}
 	}
 </style>

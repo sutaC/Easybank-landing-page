@@ -6,7 +6,7 @@
 			<img src="/images/image-currency.jpg" alt="Currency" />
 			<div class="content">
 				<small class="author">By Claire Robinson</small>
-				<h3>Receive money in any currency with no fees</h3>
+				<h3><a href="# ">Receive money in any currency with no fees</a></h3>
 				<small
 					>The world is getting smaller and we’re becoming more mobile. So why should you be forced
 					to only receive money in a single …</small
@@ -18,7 +18,7 @@
 			<img src="/images/image-restaurant.jpg" alt="Restaurant" />
 			<div class="content">
 				<small class="author">By Wilson Hutton</small>
-				<h3>Treat yourself without worrying about money</h3>
+				<h3><a href="# ">Treat yourself without worrying about money</a></h3>
 				<small
 					>Our simple budgeting feature allows you to separate out your spending and set realistic
 					limits each month. That means you …</small
@@ -30,7 +30,7 @@
 			<img src="/images/image-plane.jpg" alt="Plane" />
 			<div class="content">
 				<small class="author">By Wilson Hutton</small>
-				<h3>Take your Easybank card wherever you go</h3>
+				<h3><a href="# ">Take your Easybank card wherever you go</a></h3>
 				<small
 					>We want you to enjoy your travels. This is why we don’t charge any fees on purchases
 					while you’re abroad. We’ll even show you …</small
@@ -42,7 +42,7 @@
 			<img src="/images/image-confetti.jpg" alt="Confetti" />
 			<div class="content">
 				<small class="author">By Claire Robinson</small>
-				<h3>Our invite-only Beta accounts are now live!</h3>
+				<h3><a href="# ">Our invite-only Beta accounts are now live!</a></h3>
 				<small
 					>After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s
 					easy to request an invite through the site …</small
@@ -102,6 +102,17 @@
 		color: var(--clr-text-light);
 		display: block;
 		font-size: 0.8em;
+	}
+
+	.article a {
+		text-decoration: none;
+		color: inherit;
+		cursor: pointer;
+		transition: all 150ms ease-out;
+	}
+
+	.article a:where(:hover, :active) {
+		color: var(--clr-primary);
 	}
 
 	@media (width >= 800px) {

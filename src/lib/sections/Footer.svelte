@@ -3,42 +3,48 @@
 </script>
 
 <footer>
-	<a href="# " class="logo">
-		<img src="/images/logo.svg" alt="Logo" />
-	</a>
+	<div class="wrapper">
+		<div class="collumn">
+			<a href="# " class="logo">
+				<img src="/images/logo.svg" alt="Logo" />
+			</a>
 
-	<div class="socials">
-		<a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
-			<img src="/images/icon-facebook.svg" alt="Facebook" />
-		</a>
-		<a href="http://youtube.com" target="_blank" rel="noopener noreferrer">
-			<img src="/images/icon-youtube.svg" alt="YouTube" />
-		</a>
-		<a href="http:///twitter.com" target="_blank" rel="noopener noreferrer">
-			<img src="/images/icon-twitter.svg" alt="Twitter" />
-		</a>
-		<a href="http://pinterest.com" target="_blank" rel="noopener noreferrer">
-			<img src="/images/icon-pinterest.svg" alt="Pinterest" />
-		</a>
-		<a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
-			<img src="/images/icon-instagram.svg" alt="Instagram" />
-		</a>
+			<div class="socials">
+				<a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
+					<img src="/images/icon-facebook.svg" alt="Facebook" />
+				</a>
+				<a href="http://youtube.com" target="_blank" rel="noopener noreferrer">
+					<img src="/images/icon-youtube.svg" alt="YouTube" />
+				</a>
+				<a href="http:///twitter.com" target="_blank" rel="noopener noreferrer">
+					<img src="/images/icon-twitter.svg" alt="Twitter" />
+				</a>
+				<a href="http://pinterest.com" target="_blank" rel="noopener noreferrer">
+					<img src="/images/icon-pinterest.svg" alt="Pinterest" />
+				</a>
+				<a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
+					<img src="/images/icon-instagram.svg" alt="Instagram" />
+				</a>
+			</div>
+		</div>
+
+		<div class="links">
+			<a href="# ">About Us</a>
+			<a href="# ">Contact</a>
+			<a href="# ">Blog</a>
+			<a href="# ">Careers</a>
+			<a href="# ">Support</a>
+			<a href="# ">Privacy Policy</a>
+		</div>
 	</div>
 
-	<div class="links">
-		<a href="# ">About Us</a>
-		<a href="# ">Contact</a>
-		<a href="# ">Blog</a>
-		<a href="# ">Careers</a>
-		<a href="# ">Support</a>
-		<a href="# ">Privacy Policy</a>
-	</div>
+	<div class="collumn">
+		<div class="btnContainer">
+			<CustomButton>Request Invite</CustomButton>
+		</div>
 
-	<div class="btnContainer">
-		<CustomButton>Request Invite</CustomButton>
+		<small class="copyright">© Easybank. All Rights Reserved</small>
 	</div>
-
-	<small class="copyright">© Easybank. All Rights Reserved</small>
 </footer>
 
 <style>
@@ -68,6 +74,7 @@
 		border-radius: 2rem;
 		display: grid;
 		place-content: center;
+		margin: 1.75rem auto;
 	}
 
 	.socials {
@@ -81,8 +88,55 @@
 		margin: 1rem 0;
 	}
 
+	.btnContainer {
+		margin: 1.75rem auto;
+	}
+
 	.copyright {
 		color: var(--clr-text-light);
 		font-size: 0.75rem;
+	}
+
+	@media (width >= 800px) {
+		footer,
+		.wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		footer {
+			padding-inline: 5%;
+		}
+
+		.wrapper {
+			gap: 4rem;
+		}
+
+		.collumn {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			gap: 2rem;
+		}
+
+		footer > *,
+		.collumn > * {
+			margin: 0;
+		}
+
+		.btnContainer {
+			text-align: right;
+		}
+
+		.links {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1rem 4rem;
+		}
+
+		.links a {
+			margin: 0;
+		}
 	}
 </style>
